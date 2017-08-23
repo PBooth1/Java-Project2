@@ -3,16 +3,15 @@ public class Rectangle {
   public int width;
 
   public Rectangle(int length, int width) {
-    this.length =length;
+    this.length = length;
     this.width = width;
   }
 
-  public int getArea(){
+  public int getArea() {
     return length * width;
   }
 
-  public int getPerimeter(){
-    return 2 (* length + width);
+  public int getPerimeter() {
+    return 2 * (length + width);
   }
-
 }
