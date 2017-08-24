@@ -1,7 +1,7 @@
 pipeline {
   agent any
 
-  stages {
+  stages{
     stage('Unit Tests') {
       steps {
         sh 'ant -f test.xml -v'
@@ -9,13 +9,13 @@ pipeline {
       }
     }
   }
-  stages{
-    stage('build') {
-      steps {
-      sh 'ant -f build.xml -v'
+    stages{
+      stage('build') {
+        steps {
+        sh 'ant -f build.xml -v'
+        }
       }
     }
-  }
 
   post {
     always{
