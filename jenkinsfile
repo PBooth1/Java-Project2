@@ -8,15 +8,12 @@ pipeline {
         junit 'reports/results.xml'
       }
     }
-  }
-    stages{
       stage('build') {
         steps {
         sh 'ant -f build.xml -v'
         }
       }
     }
-
   post {
     always{
       archiveArtifacts artifacts: 'dist/*.jar', fingerprint: true
